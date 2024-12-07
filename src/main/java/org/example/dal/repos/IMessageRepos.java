@@ -9,7 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface IMessageRepos extends
   JpaRepository<MessageEntity, Long>,
   JpaSpecificationExecutor<MessageEntity> {
-
   // ...
-
 }

@@ -28,29 +28,22 @@
 package org.example.bll.service;
 
 import jakarta.annotation.PreDestroy;
+import lombok.AllArgsConstructor;
 import net.dv8tion.jda.api.JDA;
-import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 @Service
-@SuppressWarnings("unused")
+@AllArgsConstructor
 public class DiscordBotService {
 
   private final JDA jda;
 
-  public DiscordBotService(JDA jda) {
-    this.jda = jda;
-  }
-
   @PreDestroy
+  @SuppressWarnings("unused")
   public void shutdownBot() {
     if (this.jda != null) {
       this.jda.shutdown();
     }
-  }
-
-  public @Nullable JDA getJda() {
-    return this.jda;
   }
 
 }
