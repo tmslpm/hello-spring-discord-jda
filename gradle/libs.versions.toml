@@ -14,7 +14,7 @@ jetbrains_annotations_version = "26.0.1"  # https://github.com/JetBrains/java-an
 junit_version = "5.11.3"                  # https://github.com/junit-team/junit5
 mockito_version = "5.+"                   # https://github.com/mockito/mockito
 lombok_version = "1.18.36"                # https://github.com/projectlombok/lombok
-postgresql_version = "42.6.0"             # https://github.com/postgres/postgres
+postgresql_version = "42.7.4"             # https://github.com/postgres/postgres
 cadixdev_licenser_version = "0.6.1"       # https://github.com/CadixDev/licenser
 dv8tion_jda_version = "5.2.1"             # https://github.com/discord-jda/JDA
 
