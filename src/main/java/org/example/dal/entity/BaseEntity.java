@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
-@Getter()
-@Setter()
-@NoArgsConstructor()
+@Getter
+@Setter
+@NoArgsConstructor
 public class BaseEntity {
 
   @Id

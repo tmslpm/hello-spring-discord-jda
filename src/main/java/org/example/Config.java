@@ -3,6 +3,7 @@ package org.example;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.example.dal.entity.MessageEntity;
 import org.example.dal.repos.IMessageRepos;
 import org.example.pl.listener.BaseListenerJDA;
@@ -23,6 +24,10 @@ public interface Config {
     JDA createDiscordJDA(@Value("${discord.bot.token}") String botToken, List<BaseListenerJDA> eventHandlers) {
       return JDABuilder
         .createDefault(botToken)
+        .enableIntents(
+          GatewayIntent.GUILD_MEMBERS,
+          GatewayIntent.GUILD_MESSAGES,
+          GatewayIntent.MESSAGE_CONTENT)
         .setActivity(Activity.playing("Bot is running..."))
         .addEventListeners(eventHandlers
           .stream()
