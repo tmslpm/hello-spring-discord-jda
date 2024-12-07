@@ -9,9 +9,7 @@ import java.util.List;
 @Service
 public class MessageService {
 
-
   public final IMessageRepos repos;
-
 
   public MessageService(IMessageRepos messageRepos) {
     this.repos = messageRepos;

@@ -29,14 +29,8 @@ package org.example.bll.service;
 
 import jakarta.annotation.PreDestroy;
 import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
-import org.example.pl.listener.BaseListenerJDA;
 import org.jetbrains.annotations.Nullable;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @SuppressWarnings("unused")
@@ -44,21 +38,8 @@ public class DiscordBotService {
 
   private final JDA jda;
 
-  public DiscordBotService(
-    // Get Discord bot token
-    @Value("${discord.bot.token}") String botToken,
-
-    // Get all handler to be registered
-    List<BaseListenerJDA> eventHandlers
-  ) {
-    this.jda = JDABuilder
-      .createDefault(botToken)
-      .setActivity(Activity.playing("Bot is running..."))
-      .addEventListeners(eventHandlers
-        .stream()
-        .filter(BaseListenerJDA::isEnabled)
-        .toArray())
-      .build();
+  public DiscordBotService(JDA jda) {
+    this.jda = jda;
   }
 
   @PreDestroy

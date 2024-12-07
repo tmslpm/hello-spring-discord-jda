@@ -20,5 +20,3 @@ helping to maintain consistency and avoid version conflicts.
 ## Build and Run
 
 To build and run the application, execute the gradle task `bootRun`.
-
-

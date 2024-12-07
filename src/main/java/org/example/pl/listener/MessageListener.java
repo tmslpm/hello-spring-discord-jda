@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageListener extends BaseListenerJDA {
 
-
   @Override
   public void onMessageReceived(@NotNull MessageReceivedEvent event) {
     if (event.getAuthor().isBot()) {

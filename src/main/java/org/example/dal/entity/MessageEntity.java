@@ -6,13 +6,11 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-
 @EqualsAndHashCode(callSuper = true)
 @Entity(name = "message")
 @Table(name = "messages")
 @Data()
 public class MessageEntity extends BaseEntity {
-
 
   @Column(name = "content", nullable = false)
   private String content;
