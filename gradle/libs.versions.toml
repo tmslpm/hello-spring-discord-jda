@@ -15,6 +15,7 @@ junit_version = "5.11.3"                  # https://github.com/junit-team/junit5
 mockito_version = "5.+"                   # https://github.com/mockito/mockito
 lombok_version = "1.18.36"                # https://github.com/projectlombok/lombok
 postgresql_version = "42.7.4"             # https://github.com/postgres/postgres
+h2db_version = "2.2.220"                  #
 cadixdev_licenser_version = "0.6.1"       # https://github.com/CadixDev/licenser
 dv8tion_jda_version = "5.2.1"             # https://github.com/discord-jda/JDA
 
@@ -28,6 +29,7 @@ mockito_inline = { module = "org.mockito:mockito-inline", version.ref = "mockito
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok_version" }
 postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql_version" }
 dv8tion_jda = { module = "net.dv8tion:JDA", version.ref = "dv8tion_jda_version" }
+h2db = { module = "com.h2database:h2", version.ref = "h2db_version" }
 
 [bundles] # Section Bundles ~ Defines dependency bundles.
 junit = ["junit_jupiter_api", "junit_jupiter_params"]
