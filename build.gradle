@@ -30,6 +30,7 @@ dependencies {
 
   // Spring
   implementation libs.postgresql
+  testImplementation libs.h2db // h2 database is used during the test
   testImplementation "org.springframework.boot:spring-boot-starter-test"
   testImplementation "org.springframework.restdocs:spring-restdocs-mockmvc"
   implementation 'org.springframework.boot:spring-boot-starter'
