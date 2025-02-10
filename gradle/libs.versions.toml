@@ -17,7 +17,7 @@ lombok_version = "1.18.36"                # https://github.com/projectlombok/lom
 postgresql_version = "42.7.4"             # https://github.com/postgres/postgres
 h2db_version = "2.3.232"                  #
 cadixdev_licenser_version = "0.6.1"       # https://github.com/CadixDev/licenser
-dv8tion_jda_version = "5.2.1"             # https://github.com/discord-jda/JDA
+dv8tion_jda_version = "5.3.0"             # https://github.com/discord-jda/JDA
 
 [libraries] # Section Libraries ~ Maps aliases to GAV coordinates.
 jetbrains_annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains_annotations_version" }
